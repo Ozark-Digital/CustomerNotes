@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--
+  ~ Joseph Young <josephyoung658@gmail.com>
+  ~ 2021
+  ~
+  -->
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+
+	<!-- Stores main list info -->
+	<table name="ozark_customernotes_customernotes" resource="default" engine="innodb" comment="Menu">
+		<column xsi:type="int" name="entity_id" padding="10" unsigned="true" nullable="false" identity="true"
+				comment="Entity Id"/>
+		<column xsi:type="int" name="customer_id" nullable="true"  comment="Customer ID"/>
+		<column xsi:type="int" name="complaint" nullable="false" default="0" comment="Customer Complaint"/>
+		<column xsi:type="varchar" name="note" nullable="true" length="255" comment="Note"/>
+		<column xsi:type="timestamp" name="created_datetime" nullable="false" default="CURRENT_TIMESTAMP" on_update="false" comment="Created Datetime"/>
+		<column xsi:type="timestamp" name="updated_datetime" nullable="false" default="CURRENT_TIMESTAMP" on_update="true" comment="Updated Datetime"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="entity_id"/>
+		</constraint>
+	</table>
+</schema>
