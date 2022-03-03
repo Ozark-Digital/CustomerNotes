@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!--
+  ~ Joseph Young <joseph@ozarkdigital.co.uk>
+  ~ 2021
+  ~
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add action="Ozark_CustomerNotes/notes/index"
+             id="Ozark_CustomerNotes::ozark_customernotes_notes"
+             module="Ozark_CustomerNotes"
+             parent="Magento_Customer::customer"
+             resource="Magento_Customer::customer"
+             sortOrder="9999"
+             title="Customer Notes"
+        />
+    </menu>
+</config>
