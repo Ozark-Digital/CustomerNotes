@@ -7,9 +7,9 @@
 ## Install Via Composer
 
 ```bash
-composer config repositories.stockmanage git 
-composer require ozark/custernotes
-php bin/magento module:enable Ozark/custernotes
+composer config repositories.customernotes git 
+composer require ozark/customernotes
+php bin/magento module:enable Ozark/customernotes
 php bin/magento setup:di:compile 
 php bin/magento setup:upgrade
 php bin/magento cache:flush
