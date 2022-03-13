@@ -79,7 +79,7 @@
         </field>
 
 
-        <field formElement="input" name="note" sortOrder="4">
+        <field formElement="textarea" name="note" sortOrder="4">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">note</item>

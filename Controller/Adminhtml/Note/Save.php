@@ -67,16 +67,15 @@ class Save extends \Magento\Backend\App\Action
             $this->_redirect('*/*/index');
         }
         $noteId =  $data['entity_id'] ?? null;
+        $admin_user = $this->authSession->getUser()->getUserName();
+        $customerId = $data['customer_id'] ?? null;
         try{
             if ($noteId == null){
                 $newNote = $this->noteFactory->create();
-
-                $customerId = $data['customer_id'] ?? null;
-
                 $newNote->setCustomerId($customerId);
                 $newNote->setNote($data['note'] ?? null);
                 $newNote->setComplaint($data['complaint'] ?? 0);
-                $newNote->setAdminUser($this->authSession->getUser()->getUserName());
+                $newNote->setAdminUser($admin_user);
                 $newNote->setCustomerName($this->getCustomerName($customerId));
 
                 $this->noteRepository->save($newNote);
@@ -88,6 +87,10 @@ class Save extends \Magento\Backend\App\Action
                     $this->messageManager->addErrorMessage(__('Note data no longer exists'));
                     $this->_redirect('*/*/index');
                 }
+                if (!isset($data['customer_name'])){
+                    $data['customer_name'] = $this->getCustomerName($customerId);
+                }
+                $data['admin_user'] = $admin_user;
                 $rowData->setData($data);
                 $rowData->save();
 

@@ -39,11 +39,11 @@ class MassDelete extends \Magento\Backend\App\Action
                 $deleteData = $this->_noteFactory->create()->load($selectedId);
                 $deleteData->delete();
             }
-            $this->messageManager->addSuccess(__('Row data has been successfully deleted.'));
+            $this->messageManager->addSuccessMessage(__('Row data has been successfully deleted.'));
         } catch (\Exception $e) {
-            $this->messageManager->addError(__($e->getMessage()));
+            $this->messageManager->addErrorMessage(__($e->getMessage()));
         }
-        $this->_redirect('ozark_stockmanage/stockbrought/index');
+        $this->_redirect('*/*/index');
     }
 
 }
