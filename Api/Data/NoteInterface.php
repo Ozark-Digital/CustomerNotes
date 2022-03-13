@@ -20,6 +20,32 @@ interface NoteInterface extends ExtensibleDataInterface
     CONST NOTE = 'note';
     CONST CREATED_DATETIME = 'created_datetime';
     CONST UPDATED_DATETIME = 'updated_datetime';
+    CONST CUSTOMER_NAME = 'customer_name';
+    CONST ADMIN_USER = 'admin_user';
+
+
+    /**
+     * @param $customerName
+     * @return string
+     */
+    public function setCustomerName($customerName);
+
+    /**
+     * @return string
+     */
+    public function getCustomerName();
+
+    /**
+     * @param $adminUser
+     * @return string
+     */
+    public function setAdminUser($adminUser);
+
+    /**
+     * @param $adminUser
+     * @return string
+     */
+    public function getAdminUser($adminUser);
 
     /**
      * @param $id
@@ -90,5 +116,15 @@ interface NoteInterface extends ExtensibleDataInterface
     public function setcreatedDatetime($date);
 
 
+    /**
+     * @return \Ozark\CustomerNotes\Api\Data\NoteExtensionInterface
+     */
+    public function getExtensionAttributes();
+
+    /**
+     * @param \Ozark\CustomerNotes\Api\Data\NoteExtensionInterface $extensionAttributes
+     * @return mixed
+     */
+    public function setExtensionAttributes(NoteExtensionInterface $extensionAttributes);
 
 }

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+
+    <!-- Customer Notes -->
+
+    <preference for="Ozark\CustomerNotes\Api\Data\NoteInterface" type="Ozark\CustomerNotes\Model\Note" />
+    <preference for="Ozark\CustomerNotes\Api\Data\NoteSearchResultInterface" type="Ozark\CustomerNotes\Model\NoteSearchResult" />
+    <preference for="Ozark\CustomerNotes\Api\NoteRepositoryInterface" type="Ozark\CustomerNotes\Model\NoteRepository" />
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="ozark_customernotes_note_listing_data_source" xsi:type="string">Ozark\CustomerNotes\Model\ResourceModel\Note\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Ozark\CustomerNotes\Model\ResourceModel\Note\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">ozark_customernotes_customernotes</argument>
+            <argument name="resourceModel" xsi:type="string">Ozark\CustomerNotes\Model\ResourceModel\Note</argument>
+        </arguments>
+    </virtualType>
+
+
+
+</config>
+

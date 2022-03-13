@@ -7,8 +7,8 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
 	<router id="admin">
-		<route frontName="Ozark_CustomerNotes" id="Ozark_CustomerNotes">
-			<module before="Magento_Backend" name="Ozark_CustomerNotes"/>
+		<route frontName="ozark_customernotes" id="ozark_customernotes">
+			<module before="Magento_Backend" name="ozark_customernotes"/>
 		</route>
 	</router>
 </config>

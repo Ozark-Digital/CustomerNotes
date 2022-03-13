@@ -1,0 +1,13 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left"
+      xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="customer_form">
+            <block class="Ozark\CustomerNotes\Block\Adminhtml\Edit\Tab\Note\Notes" name="note_tab">
+                <action method="setTabLabel">
+                    <argument name="label" xsi:type="string">Notes</argument>
+                    <argument name="sort_order" xsi:type="number">100</argument>
+                </action>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

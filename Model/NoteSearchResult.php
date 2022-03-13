@@ -8,10 +8,10 @@
 namespace Ozark\CustomerNotes\Model;
 
 use Magento\Framework\Api\Search\SearchResult;
-use Ozark\Maxoptra\API\Data\CollectionBookSearchResultInterface;
+use Ozark\CustomerNotes\Api\Data\NoteSearchResultInterface;
 
 
-class NoteSearchResult extends SearchResult implements CollectionBookSearchResultInterface
+class NoteSearchResult extends SearchResult implements NoteSearchResultInterface
 {
 
 }

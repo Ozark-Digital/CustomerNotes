@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+
+
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/layout_generic.xsd">
+    <container name="root" label="Root">
+        <block class="Ozark\CustomerNotes\Block\Adminhtml\Edit\Tab\Note\View\Notes" name="note_tab"/>
+    </container>
+</layout>

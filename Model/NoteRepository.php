@@ -12,12 +12,20 @@ use Magento\Framework\Api\SearchResultsInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
+
+
 use Ozark\CustomerNotes\Api\Data\NoteSearchResultInterface;
-use Ozark\CustomerNotes\Api\NoteRepositoryInterface;
-use Ozark\CustomerNotes\Model\ResourceModel\Note\CollectionFactory;
 use Ozark\CustomerNotes\Api\Data\NoteSearchResultInterfaceFactory;
 use Ozark\CustomerNotes\Model\ResourceModel\Note;
+
+
+use Ozark\CustomerNotes\Api\NoteRepositoryInterface;
 use Ozark\CustomerNotes\Api\Data\NoteInterface;
+
+use Ozark\CustomerNotes\Model\ResourceModel\Note\CollectionFactory;
+
+
+
 
 class NoteRepository implements NoteRepositoryInterface
 {
