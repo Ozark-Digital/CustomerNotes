@@ -1,8 +1,10 @@
-# Magento2 Customer Note Log
+# Magento2 Customer Note and Complaint Logger
 
 ## Description
 
+Ability to log notes/complaints onto the customers account within the magento 2 backend.
 
+Tested on Magento 2 Version 2.4
 
 ## Install Via Composer
 
