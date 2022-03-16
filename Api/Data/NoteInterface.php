@@ -94,7 +94,7 @@ interface NoteInterface extends ExtensibleDataInterface
     /**
      * @return string
      */
-    public function getupdatedDatetime($date);
+    public function getupdatedDatetime();
 
 
     /**

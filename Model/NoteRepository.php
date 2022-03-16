@@ -116,7 +116,7 @@ class NoteRepository implements NoteRepositoryInterface
      */
     public function getList(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria)
     {
-        $collection = $this->collectionBookFactory->create();
+        $collection = $this->collectionFactory->create();
         $this->collectionProcessor->process($searchCriteria, $collection);
         $searchResults = $this->searchResultFactory->create();
 
