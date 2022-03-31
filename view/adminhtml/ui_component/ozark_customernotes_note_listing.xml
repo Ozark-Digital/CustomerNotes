@@ -13,6 +13,12 @@
                             <item name="class" xsi:type="string">primary</item>
                             <item name="url" xsi:type="string">ozark_customernotes/note/new</item>
                         </item>
+            <item name="export" xsi:type="array">
+                <item name="name" xsi:type="string">export</item>
+                <item name="label" xsi:type="string" translate="true">Email Complaint Report</item>
+                <item name="class" xsi:type="string">secondary</item>
+                <item name="url" xsi:type="string">ozark_customernotes/note/export</item>
+            </item>
         </item>
     </argument>
     <dataSource name="nameOfDataSource">
