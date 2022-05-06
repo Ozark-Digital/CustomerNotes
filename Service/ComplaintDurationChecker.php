@@ -112,8 +112,11 @@ class ComplaintDurationChecker
     {
         if ($collection->getItems() != 0){
             foreach ($collection->getItems() as $item){
+                $customDateGreater = $this->timezone->date()->modify('-31 days')->format('Y-m-d H:i:s');
                 if ($item->getComplaint() == '1'){
-                    return true;
+                    if ($item->getupdatedDatetime() > $customDateGreater) {
+                        return true;
+                    }
                 }
             }
         }
