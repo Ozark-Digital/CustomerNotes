@@ -13,6 +13,10 @@
 				comment="Entity Id"/>
 		<column xsi:type="int" name="customer_id" nullable="true"  comment="Customer ID"/>
 
+		<column xsi:type="text" name="solution" nullable="true" comment="solution"/>
+		<column xsi:type="int" name="nature_of_issue" nullable="true" comment="natureofissue"/>
+		<column xsi:type="int" name="responsibility" nullable="true" comment="responsibility"/>
+
 		<column xsi:type="text" name="note" nullable="true" comment="Note"/>
 		<column xsi:type="int" name="complaint" nullable="false" default="0" comment="Customer Complaint"/>
 		<column xsi:type="varchar" name="customer_name" nullable="true" length="255" comment="Customer Name"/>

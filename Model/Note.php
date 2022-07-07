@@ -146,8 +146,56 @@ class Note extends AbstractExtensibleModel implements NoteInterface
     /**
      * @inheritDoc
      */
-    public function getAdminUser($adminUser)
+    public function getAdminUser()
     {
        return $this->getData(self::ADMIN_USER);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getResponsibility()
+    {
+        return $this->getData(self::RESPONSIBILITY);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setResponsibility($responsibility)
+    {
+        return $this->setData(self::RESPONSIBILITY, $responsibility);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getNatureOfIssue()
+    {
+        return $this->getData(self::NATUREOFISSUE);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setNatureOfIssue($natureOfIssue)
+    {
+        return $this->setData(self::NATUREOFISSUE, $natureOfIssue);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getSolution()
+    {
+        return $this->getData(self::SOLUTION);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setSolution($solution)
+    {
+        return $this->setData(self::SOLUTION, $solution);
     }
 }

@@ -22,6 +22,43 @@ interface NoteInterface extends ExtensibleDataInterface
     CONST UPDATED_DATETIME = 'updated_datetime';
     CONST CUSTOMER_NAME = 'customer_name';
     CONST ADMIN_USER = 'admin_user';
+    const SOLUTION = 'solution';
+    const NATUREOFISSUE = 'nature_of_issue';
+    const RESPONSIBILITY = 'responsibility';
+
+
+    /**
+     * @return int
+     */
+    public function getResponsibility();
+
+    /**
+     * @param $responsibility
+     * @return int
+     */
+    public function setResponsibility($responsibility);
+
+    /**
+     * @return int
+     */
+    public function getNatureOfIssue();
+
+    /**
+     * @param $natureOfIssue
+     * @return int
+     */
+    public function setNatureOfIssue($natureOfIssue);
+
+    /**
+     * @return string
+     */
+    public function getSolution();
+
+    /**
+     * @param $solution
+     * @return string
+     */
+    public function setSolution($solution);
 
 
     /**
@@ -45,7 +82,7 @@ interface NoteInterface extends ExtensibleDataInterface
      * @param $adminUser
      * @return string
      */
-    public function getAdminUser($adminUser);
+    public function getAdminUser();
 
     /**
      * @param $id

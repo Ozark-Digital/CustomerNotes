@@ -17,7 +17,7 @@
                 <item name="name" xsi:type="string">export</item>
                 <item name="label" xsi:type="string" translate="true">Email Complaint Report</item>
                 <item name="class" xsi:type="string">secondary</item>
-                <item name="url" xsi:type="string">ozark_customernotes/note/export</item>
+                <item name="url" xsi:type="string">ozark_customernotes/report/complaint</item>
             </item>
         </item>
     </argument>
@@ -118,7 +118,16 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Note</item>
+                    <item name="label" xsi:type="string" translate="true">Note/Complaint</item>
+                </item>
+            </argument>
+        </column>
+
+        <column sortOrder="75" name="solution">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="filter" xsi:type="string">text</item>
+                    <item name="label" xsi:type="string" translate="true">Solution</item>
                 </item>
             </argument>
         </column>

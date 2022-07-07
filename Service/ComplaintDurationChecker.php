@@ -105,6 +105,19 @@ class ComplaintDurationChecker
     }
 
     /**
+     * @param null $customerId
+     * @return \Ozark\CustomerNotes\Api\Data\NoteSearchResultInterface
+     */
+    public function getComplaintsWithinDay($customerId = null){
+        $day = $this->timezone->date()->format('D');
+        $day = strtolower($day);
+        if ($day == "fri"){
+            return $this->getComplaints( '-3 days', $customerId);
+        }
+        return $this->getComplaints( '-1 days', $customerId);
+    }
+
+    /**
      * @param $collection
      * @return bool
      */

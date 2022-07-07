@@ -88,8 +88,22 @@
             </argument>
             <settings>
                 <dataType>text</dataType>
-                <label translate="true">Note</label>
+                <label translate="true">Note/Complaint</label>
                 <dataScope>note</dataScope>
+            </settings>
+        </field>
+
+        <field formElement="textarea" name="solution" sortOrder="5">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">solution</item>
+                    <item name="validate-number" xsi:type="boolean">true</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Solution</label>
+                <dataScope>solution</dataScope>
             </settings>
         </field>
 

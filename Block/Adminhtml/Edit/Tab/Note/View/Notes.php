@@ -89,6 +89,13 @@ class Notes  extends \Magento\Backend\Block\Widget\Grid\Extended
             ]
         );
         $this->addColumn(
+            'solution',
+            [
+                'header' => __('Solution'),
+                'index' => 'solution',
+            ]
+        );
+        $this->addColumn(
             'complaint',
             [
                 'header' => __('Is Complaint'),

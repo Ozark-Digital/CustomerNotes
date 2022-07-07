@@ -74,6 +74,7 @@ class Save extends \Magento\Backend\App\Action
                 $newNote = $this->noteFactory->create();
                 $newNote->setCustomerId($customerId);
                 $newNote->setNote($data['note'] ?? null);
+                $newNote->setSolution($data['solution'] ?? null);
                 $newNote->setComplaint($data['complaint'] ?? 0);
                 $newNote->setAdminUser($admin_user);
                 $newNote->setCustomerName($this->getCustomerName($customerId));
