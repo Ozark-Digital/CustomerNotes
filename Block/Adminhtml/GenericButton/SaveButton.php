@@ -9,7 +9,7 @@ namespace Ozark\CustomerNotes\Block\Adminhtml\GenericButton;
 
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
-use Ozark\StockManage\Block\Adminhtml\StockBrought\Edit\GenericButton;
+use Ozark\CustomerNotes\Block\Adminhtml\GenericButton\GenericButton;
 
 class SaveButton  extends GenericButton implements ButtonProviderInterface
 {
