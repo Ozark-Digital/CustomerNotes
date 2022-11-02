@@ -5,6 +5,7 @@
  */
 
 
+
 namespace Ozark\CustomerNotes\Controller\Adminhtml\Report;
 
 
@@ -31,7 +32,10 @@ class complaint extends Action
     private $coreRegistry;
 
     public function __construct(
-        \Ozark\StockManage\Service\ComplaintReport $complaintReport,
+        /** Todo
+         *Remove StockManage dependency
+         */
+        \Ozark\CustomerNotes\Service\ComplaintReport $complaintReport,
         Context $context,
         PageFactory $resultPageFactory,
         \Magento\Framework\Registry $coreRegistry)
