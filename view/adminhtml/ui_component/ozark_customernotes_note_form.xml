@@ -116,7 +116,7 @@
             </argument>
             <settings>
                 <dataType>text</dataType>
-                <label translate="true">Is Complaint</label>
+                <label translate="true">Display On Complaints Report</label>
                 <dataScope>complaint</dataScope>
             </settings>
             <formElements>

@@ -34,7 +34,7 @@ class Notes extends \Magento\Backend\Block\Template implements TabInterface
      */
     public function getTabLabel()
     {
-        return __('Customer Notes & Complaints');
+        return __('Customer Complaints');
     }
 
     /**
@@ -42,7 +42,7 @@ class Notes extends \Magento\Backend\Block\Template implements TabInterface
      */
     public function getTabTitle()
     {
-        return __('Customer Notes & Complaints');
+        return __('Customer Complaints');
     }
 
     /**

@@ -198,4 +198,20 @@ class Note extends AbstractExtensibleModel implements NoteInterface
     {
         return $this->setData(self::SOLUTION, $solution);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function setId($id)
+    {
+        return $this->setData(self::ENTITY_ID, $id);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getId()
+    {
+        return $this->getData(self::ENTITY_ID);
+    }
 }

@@ -98,7 +98,7 @@ class Notes  extends \Magento\Backend\Block\Widget\Grid\Extended
         $this->addColumn(
             'complaint',
             [
-                'header' => __('Is Complaint'),
+                'header' => __('Display on Complaints Report'),
                 'index' => 'complaint',
                 'type' => 'options',
                 'options' => $this->yesnooptions->getOptions()

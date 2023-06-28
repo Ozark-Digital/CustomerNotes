@@ -43,7 +43,7 @@ class Index extends \Magento\Backend\App\Action
     {
         $resultPage = $this->resultPageFactory->create();
         $resultPage->initLayout();
-        $resultPage->getConfig()->getTitle()->prepend(__("Customer Notes & Complaints"));
+        $resultPage->getConfig()->getTitle()->prepend(__("Customer Complaints"));
         return $resultPage;
     }
 

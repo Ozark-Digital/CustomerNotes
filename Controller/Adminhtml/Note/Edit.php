@@ -92,7 +92,7 @@ class Edit extends Action
         }
         
         $rowId = (int)$parms['id'];
-        $title = $rowId ? __('Edit Note') : __('Add Note');
+        $title = $rowId ? __('Edit Complaint') : __('Add Complaint');
 
 
         $resultPage = $this->resultPageFactory->create();

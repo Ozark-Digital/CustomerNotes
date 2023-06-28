@@ -22,8 +22,7 @@ class ComplaintDurationChecker
      * @var \Ozark\CustomerNotes\Model\ResourceModel\Note\CollectionFactory
      */
     private $noteCollectionFactory;
-    
-    
+
     /**
      * @var \Magento\Framework\Stdlib\DateTime\TimezoneInterface
      */

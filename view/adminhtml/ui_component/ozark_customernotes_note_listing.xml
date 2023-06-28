@@ -148,7 +148,7 @@
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">select</item>
                     <item name="component" xsi:type="string">Magento_Ui/js/grid/columns/select</item>
-                    <item name="label" xsi:type="string" translate="true">Complaint</item>
+                    <item name="label" xsi:type="string" translate="true">Display On Complaint Report</item>
                     <item name="dataType" xsi:type="string">select</item>
                 </item>
             </argument>

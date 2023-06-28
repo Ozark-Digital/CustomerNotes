@@ -12,11 +12,17 @@ use Ozark\CustomerNotes\Model\ResourceModel\Note;
 
 class Collection extends AbstractCollection
 {
+     /**
+     * Define resource model
+     *
+     * @return void
+     */
 
-    public function _construct()
+    protected function _construct()
     {
         $this->_init(\Ozark\CustomerNotes\Model\Note::class,
-        Note::class);
+        \Ozark\CustomerNotes\Model\ResourceModel\Note::class);
+
     }
 
 
