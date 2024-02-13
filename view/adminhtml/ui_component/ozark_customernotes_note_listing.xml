@@ -2,8 +2,8 @@
 
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">ozark_customernotes_note_listing.ozark_customernotes_note_listing_data_source</item>
-            <item name="deps" xsi:type="string">ozark_customernotes_note_listing.ozark_customernotes_note_listing_data_source</item>
+            <item name="provider" xsi:type="string">ozark_customernotes_note_listing.ozark_customernotes_notes_listing_data_source</item>
+            <item name="deps" xsi:type="string">ozark_customernotes_note_listing.ozark_customernotes_notes_listing_data_source</item>
         </item>
         <item name="spinner" xsi:type="string">spinner_columns</item>
         <item name="buttons" xsi:type="array">
@@ -24,7 +24,7 @@
     <dataSource name="nameOfDataSource">
         <argument name="dataProvider" xsi:type="configurableObject">
             <argument name="class" xsi:type="string">Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider</argument>
-            <argument name="name" xsi:type="string">ozark_customernotes_note_listing_data_source</argument>
+            <argument name="name" xsi:type="string">ozark_customernotes_notes_listing_data_source</argument>
             <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
             <argument name="requestFieldName" xsi:type="string">id</argument>
             <argument name="data" xsi:type="array">

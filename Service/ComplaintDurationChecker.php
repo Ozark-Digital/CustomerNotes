@@ -100,7 +100,15 @@ class ComplaintDurationChecker
      * @return \Ozark\CustomerNotes\Api\Data\NoteSearchResultInterface
      */
     public function getComplaintsWithinWeek($customerId = null){
-        return $this->getComplaints( '-7 days', $customerId);
+        return $this->getComplaints( '-14 days', $customerId);
+    }
+
+    /**
+     * @param null $customerId
+     * @return \Ozark\CustomerNotes\Api\Data\NoteSearchResultInterface
+     */
+    public function getComplaintsWithinMonth($customerId = null){
+        return $this->getComplaints( '-31 days', $customerId);
     }
 
     /**

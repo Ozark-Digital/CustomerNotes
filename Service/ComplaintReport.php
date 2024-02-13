@@ -60,8 +60,8 @@ class ComplaintReport
         }
         $fileName = 'ComplaintReport';
         $filePath = $this->PDF->generateComplaintReportPDF($itemData, $fileName);
-//        $this->email->sendPdfEmail($fileName, $filePath,
-//            $this->nextDeliveryDate->getNextDeliveryDate(), 'Daily');
+        $this->email->sendPdfEmail($fileName, $filePath,
+            $this->nextDeliveryDate->getNextDeliveryDate(), 'Daily');
     }
 
 }

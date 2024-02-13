@@ -14,12 +14,12 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="ozark_customernotes_note_listing_data_source" xsi:type="string">Ozark\CustomerNotes\Model\ResourceModel\Note\Collection</item>
+                <item name="ozark_customernotes_notes_listing_data_source" xsi:type="string">NotesCollection</item>
             </argument>
         </arguments>
     </type>
 
-    <virtualType name="Ozark\CustomerNotes\Model\ResourceModel\Note\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+    <virtualType name="NotesCollection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
         <arguments>
             <argument name="mainTable" xsi:type="string">ozark_customernotes_customernotes</argument>
             <argument name="resourceModel" xsi:type="string">Ozark\CustomerNotes\Model\ResourceModel\Note</argument>
