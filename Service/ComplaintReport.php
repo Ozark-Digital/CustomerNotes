@@ -51,17 +51,31 @@ class ComplaintReport
     public function sendComplaintReport(){
         $complaints = $this->complaintDurationChecker->getComplaintsWithinWeek();
         $itemData = [];
+        $itemDataOffice = [];
 
         foreach ($complaints->getItems() as $item){
             if ($item->getComplaint() == '1'){
                 $arr = [$item->getCustomerName(), $item->getNote(), $item->getSolution(), $item->getcreatedDatetime()];
                 array_push( $itemData, $arr);
+            } else {
+                $arr = [$item->getCustomerName(), $item->getNote(), $item->getSolution(), $item->getcreatedDatetime()];
+                array_push( $itemDataOffice, $arr);
             }
         }
+
+
         $fileName = 'ComplaintReport';
+        $fileNameOffice = 'Office-ComplaintReport';
+
         $filePath = $this->PDF->generateComplaintReportPDF($itemData, $fileName);
+        $filePathOffice = $this->PDF->generateComplaintReportPDF($itemDataOffice, $fileNameOffice);
+
         $this->email->sendPdfEmail($fileName, $filePath,
             $this->nextDeliveryDate->getNextDeliveryDate(), 'Daily');
+
+        $this->email->sendPdfEmail($fileNameOffice, $filePathOffice,
+            $this->nextDeliveryDate->getNextDeliveryDate(), 'Daily');
+
     }
 
 }

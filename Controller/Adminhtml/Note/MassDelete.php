@@ -39,7 +39,7 @@ class MassDelete extends \Magento\Backend\App\Action
                 $deleteData = $this->_noteFactory->create()->load($selectedId);
                 $deleteData->delete();
             }
-            $this->messageManager->addSuccessMessage(__('Row data has been successfully deleted.'));
+            $this->messageManager->addSuccessMessage(__('Complaint has been successfully deleted.'));
         } catch (\Exception $e) {
             $this->messageManager->addErrorMessage(__($e->getMessage()));
         }

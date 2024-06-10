@@ -50,7 +50,7 @@ class Delete extends \Magento\Backend\App\Action
 
         $rowData = $this->noteFactory->create()->load($noteId);
         if (!$rowData->getId()) {
-            $this->messageManager->addErrorMessage(__('Note data no longer exists'));
+            $this->messageManager->addErrorMessage(__('Complaint data no longer exists'));
             $this->_redirect('*/*/index');
         }
         $rowData->delete();

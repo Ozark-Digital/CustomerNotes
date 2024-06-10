@@ -72,20 +72,26 @@ class Save extends \Magento\Backend\App\Action
         try{
             if ($noteId == null){
                 $newNote = $this->noteFactory->create();
-                $newNote->setCustomerId($customerId);
-                $newNote->setNote($data['note'] ?? null);
-                $newNote->setSolution($data['solution'] ?? null);
-                $newNote->setComplaint($data['complaint'] ?? 0);
-                $newNote->setAdminUser($admin_user);
-                $newNote->setCustomerName($this->getCustomerName($customerId));
 
-                $this->noteRepository->save($newNote);
+                $note = ($data['note'] ?? null);
 
+                if ($note == null){
+                    $this->messageManager->addErrorMessage(__('Complaint field empty.'));
+                    $this->_redirect('*/*/index');
+                } else {
+                    $newNote->setCustomerId($customerId);
+                    $newNote->setNote($note);
+                    $newNote->setSolution($data['solution'] ?? null);
+                    $newNote->setComplaint($data['complaint'] ?? 0);
+                    $newNote->setAdminUser($admin_user);
+                    $newNote->setCustomerName($this->getCustomerName($customerId));
+                    $this->noteRepository->save($newNote);
+                }
             } else {
 
                 $rowData = $this->noteFactory->create()->load($noteId);
                 if (!$rowData->getId()) {
-                    $this->messageManager->addErrorMessage(__('Note data no longer exists'));
+                    $this->messageManager->addErrorMessage(__('Complaint data no longer exists'));
                     $this->_redirect('*/*/index');
                 }
                 if (!isset($data['customer_name'])){
@@ -97,7 +103,7 @@ class Save extends \Magento\Backend\App\Action
 
             }
 
-            $this->messageManager->addSuccessMessage(__('Row data has been successfully saved.'));
+            $this->messageManager->addSuccessMessage(__('Data has been successfully saved.'));
         } catch (\Exception $e) {
             $this->messageManager->addErrorMessage(__($e->getMessage()));
         }
