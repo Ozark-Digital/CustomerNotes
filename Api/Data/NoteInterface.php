@@ -143,7 +143,7 @@ interface NoteInterface extends ExtensibleDataInterface
     /**
      * @return Date
      */
-    public function getcreatedDatetime();
+    public function getCreatedDatetime();
 
 
     /**

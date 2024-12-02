@@ -54,15 +54,22 @@ class ComplaintReport
         $itemDataOffice = [];
 
         foreach ($complaints->getItems() as $item){
+            $arr = [$item->getCustomerName(), $item->getNote(), $item->getSolution(), $item->getCreatedDatetime()];
             if ($item->getComplaint() == '1'){
-                $arr = [$item->getCustomerName(), $item->getNote(), $item->getSolution(), $item->getcreatedDatetime()];
                 array_push( $itemData, $arr);
             } else {
-                $arr = [$item->getCustomerName(), $item->getNote(), $item->getSolution(), $item->getcreatedDatetime()];
                 array_push( $itemDataOffice, $arr);
             }
         }
 
+        // Sort $itemData and $itemDataOffice by createdDatetime in descending order
+        usort($itemData, function($a, $b) {
+            return strtotime($b[0]) - strtotime($a[0]);
+        });
+
+        usort($itemDataOffice, function($a, $b) {
+            return strtotime($b[0]) - strtotime($a[0]);
+        });
 
         $fileName = 'ComplaintReport';
         $fileNameOffice = 'Office-ComplaintReport';

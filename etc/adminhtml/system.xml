@@ -6,14 +6,14 @@
         </tab>
         <section id="ozark_customernotes_config" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
-            <label>Customer Notes</label>
+            <label>Customer Complaints</label>
             <tab>Ozark</tab>
             <resource>Ozark_CustomerNotes::ozark_customernotes</resource>
             <group id="department_list" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
                 <label>Department Lists</label>
                 <field id="department" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
-                    <label>Supplier Lists</label>
-                    <backend_model>Ozark\CustomerNotes\Model\System\Config\Backend\Suppliers</backend_model>
+                    <label>Department Lists</label>
+                    <backend_model>Ozark\CustomerNotes\Model\System\Config\Backend\Departments</backend_model>
                     <frontend_model>Ozark\CustomerNotes\Block\Adminhtml\Form\Field\Departments</frontend_model>
                 </field>
             </group>

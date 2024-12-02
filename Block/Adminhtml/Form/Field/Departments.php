@@ -1,15 +1,16 @@
 <?php
 
-
 namespace Ozark\CustomerNotes\Block\Adminhtml\Form\Field;
-
 
 use Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray;
 use Magento\Framework\DataObject;
 
-class Departments extends AbstractFieldArray {
+class Departments extends AbstractFieldArray
+{
     private $dropdownRenderer;
-    protected function _prepareToRender() {
+
+    protected function _prepareToRender()
+    {
         $this->addColumn(
             'list_name',
             [
@@ -27,7 +28,9 @@ class Departments extends AbstractFieldArray {
         $this->_addAfter = false;
         $this->_addButtonLabel = __('Add');
     }
-    protected function _prepareArrayRow(DataObject $row) {
+
+    protected function _prepareArrayRow(DataObject $row)
+    {
         $options = [];
         $dropdownField = $row->getDropdownField();
         if ($dropdownField !== null) {
@@ -35,13 +38,18 @@ class Departments extends AbstractFieldArray {
         }
         $row->setData('option_extra_attrs', $options);
     }
-    private function getDropdownRenderer() {
+
+    private function getDropdownRenderer()
+    {
         if (!$this->dropdownRenderer) {
             $this->dropdownRenderer = $this->getLayout()->createBlock(
-                CustomColumn::class,
+                \Magento\Framework\View\Element\Html\Select::class,
                 '',
                 ['data' => ['is_render_to_js_template' => true]]
-            );
+            )->setOptions([
+                ['value' => '1', 'label' => __('Yes')],
+                ['value' => '0', 'label' => __('No')],
+            ]);
         }
         return $this->dropdownRenderer;
     }

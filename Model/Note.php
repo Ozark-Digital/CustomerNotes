@@ -90,7 +90,7 @@ class Note extends AbstractExtensibleModel implements NoteInterface
     /**
      * @inheritDoc
      */
-    public function getcreatedDatetime()
+    public function getCreatedDatetime()
     {
         return $this->getData(self::CREATED_DATETIME);
     }
